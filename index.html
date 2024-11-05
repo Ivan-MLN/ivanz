@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>My Portfolio</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(135deg, 
+        #1a1a1a 0%,
+        #2b4b8c 20%,
+        #1f3a7a 40%,
+        #324f94 60%,
+        #253c6e 80%,
+        #1a1a1a 100%);
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #00bfff;
+    text-shadow: 2px 2px #000000;
+}
+.intro {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+}
+.hello-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.typed-text {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem;
+}
+.social-links a {
+    transition: all 0.3s ease;
+}
+.social-links a:hover {
+    transform: translateY(-5px);
+    color: #00bfff;
+}
+.divider {
+    width: 400px;
+    margin: 20px auto;
+    border-color: rgba(156, 163, 175, 0.5);
+}
+</style>
+<body class="flex flex-col items-center justify-start min-h-screen">
+    <div class="text-center mt-4">
+        <div class="title">MY PORTFOLIO</div>
+        <div class="mt-4 mb-2 hello-text">Hello, I'm Ivan. 17 yo</div>
+        <div class="mb-4">
+            <span class="typed-text">I'm a </span>
+            <span class="typed-text" id="typed-output"></span>
+        </div>
+        <hr class="divider">
+        
+        <!-- Social Links -->
+        <div class="social-links flex justify-center gap-8 mt-4">
+            <a href="https://github.com/Ivan-MLN" class="text-white hover:text-blue-400">
+                <i class="fab fa-github text-3xl"></i>
+            </a>
+            <a href="https://www.instagram.com/iva.nz._" class="text-white hover:text-pink-500">
+                <i class="fab fa-instagram text-3xl"></i>
+            </a>
+            <a href="https://wa.me/message/RMJH5HO3LPJFJ1" class="text-white hover:text-green-400">
+                <i class="fab fa-whatsapp text-3xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Introduction Article -->
+    <div class="mt-8 px-4 max-w-2xl">
+        <article class="text-center">
+            <h2 class="text-2xl intro mb-4">Introduction</h2>
+            <p class="mb-4 typed-text">
+                Welcome to my portfolio! I'm a passionate young developer interested in creating amazing web experiences. 
+                I love learning new technologies and working on exciting projects.
+            </p>
+        </article>
+    </div>
+
+    <!-- Tech Stack Icons -->
+    <div class="flex justify-center gap-8 mt-8">
+        <i class="fab fa-html5 text-5xl text-orange-500 hover:text-orange-600 transition-colors"></i>
+        <i class="fab fa-node-js text-5xl text-green-500 hover:text-green-600 transition-colors"></i>
+        <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" class="text-gray-200 hover:text-gray-300 transition-colors">
+                <path fill="currentColor" d="M24 18.588a1.529 1.529 0 0 1-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 0 1-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 0 1 1.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 0 1 1.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 0 0 0 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 0 0 2.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 0 1-2.589 3.957 6.272 6.272 0 0 1-7.306-.933 6.575 6.575 0 0 1-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 0 1 0 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"/>
+            </svg>
+        </div>
+    </div>
+    <script>
+    var typed = new Typed('#typed-output', {
+    strings: ["Web Developer", "Backend Developer"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true,
+    loopCount: Infinity,
+    showCursor: false,
+    backDelay: 1000,
+    startDelay: 300
+});
+    </script>
+</body>
+</html>
